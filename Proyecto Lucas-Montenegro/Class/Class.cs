@@ -8,32 +8,51 @@ namespace Proyecto_Lucas_Montenegro.Class
 {
     public class Usuario
     {
-        int Id;
-        String Nombre;
-        String Apellido;
-        String NombreUsuario;
-        String Contraseña;
-        String Mail;
+        public int Id;
+        public String NombreUsuario { get; set; }
+        public String Contrasena { get; set; }
+        public String FechaInsersion { get; set; }
+        public String FechaActualizacion { get; set; }
+        public Usuario(int id, string nombreUsuario, string contrasena, string fechaInsersion, string fechaActualizacion)
+        {
+            Id = id;
+            NombreUsuario = nombreUsuario;
+            Contrasena = contrasena;
+            FechaInsersion = fechaInsersion;
+            FechaActualizacion = fechaActualizacion;
+        }
+        public Usuario() { }
+
     }
     public class Producto
     {
-        int Id;
-        String Descripcion;
-        int Costo;
-        int PrecioVenta;
-        int Stock;
-        int IdUsuario;
+        public int Id { get; set; }
+        public String Descripcion { get; set; }
+        public int Costo { get; set; }
+        public int PrecioVenta { get; set; }
+        public int Stock { get; set; }
+        public int IdUsuario { get; set; }
+        public String FechaInsersion { get; set; }
+
+        public String FechaActualizacion { get; set; }
     }
     public class ProductoVendido
     {
-        int Id;
-        int IdProducto;
-        int Stock;
-        int IdVenta;
+        public int Id { get; set; }
+        public int IdProducto { get; set; }
+        public int Stock { get; set; }
+        public int IdVenta { get; set; }
+        public String FechaInsersion { get; set; }
+
+        public String FechaActualizacion { get; set; }
     }
     public class Venta
     {
-        int Id;
-        String Comentarios;
+        public int Id { get; set; }
+        public String Comentarios { get; set; }
+        public int IdUsuario { get; set; }
+        public String FechaInsersion { get; set; }
+        public String FechaActualizacion { get; set; }
+        public int Monto { get; set; }
     }
 }
